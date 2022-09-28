@@ -2,7 +2,7 @@ import java.io.IOException;
 
 class App {
     public static void main(String[] args) throws IOException {
-        GraphList g1 = new GraphList("src/graph5.txt");
+        GraphList g1 = new GraphList("files/graph5.txt");
         System.out.println(g1.kruskal());
         System.out.println(g1.prim());
         // GraphList g1 = new GraphList(5);
