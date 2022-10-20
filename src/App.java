@@ -2,9 +2,11 @@ import java.io.IOException;
 
 class App {
     public static void main(String[] args) throws IOException {
-        GraphList g1 = new GraphList("files/graph5.txt");
-        System.out.println(g1.kruskal());
-        System.out.println(g1.prim());
+        GraphList g = new GraphList("files/graph5.txt");
+        System.out.println(g);
+
+        // System.out.println(g.isOriented());
+        // System.out.println(g1.prim());
         // GraphList g1 = new GraphList(5);
         // g1.addEdge(0, 1, 1);
         // g1.addEdge(0, 2, 1);

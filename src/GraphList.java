@@ -153,7 +153,22 @@ public class GraphList {
     }
 
     public boolean isOriented() {
-        // TDOO tarefa da parte 1
+        for (int u = 0; u < this.adjList.size(); ++u) {
+            for (int idx = 0; idx < this.adjList.get(u).size(); ++idx) {
+                int v = this.adjList.get(u).get(idx).getSink();
+                boolean hasEdgeVU = false;
+                for (int idx2 = 0; idx2 < this.adjList.get(v).size(); ++idx2) {
+                    int u2 = this.adjList.get(v).get(idx2).getSink();
+                    if (u == u2) {
+                        hasEdgeVU = true;
+                        break;
+                    }
+                }
+                if (!hasEdgeVU) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
